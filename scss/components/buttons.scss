@@ -1,20 +1,41 @@
-.button-red {
+.button-white-bordered {
+    display: block;
+    border-radius: $button-radius;
+    border: 2px solid $secondary-color;
+    color: $secondary-color;
+    background-color: transparent;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0.95rem 1.5rem;
+    @include widthFit();
+    &:hover {
+        background-color: $secondary-color;
+        color: $highlight-color;
+        text-decoration: none;
+    }
+}
+.button-blue {
     display: block;
     border-radius: $button-radius;
     border: 2px solid $highlight-color;
+    color: $secondary-color;
     background-color: $highlight-color;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
-    padding: 0.6rem 1rem;
-    color: $primary-color-darkbg;
+    padding: 0.95rem 1.5rem;
     @include widthFit();
     &:hover {
-        background-color: $primary-color;
-        color: $primary-color-darkbg;
+        background-color: $secondary-color;
+        color: $highlight-color;
         text-decoration: none;
     }
-    img {
-        margin-right: 0.5rem;
-        display: inline-block;
+}
+.button-arrow-white {
+    padding: 0.95rem 3rem 0.95rem 1.5rem;
+    background-image: url("../img/arrow-right-white.png");
+    background-repeat: no-repeat;
+    background-position: right 1.25rem center;
+    &:hover {
+        background-image: url("../img/arrow-right-blue.png");
     }
 }

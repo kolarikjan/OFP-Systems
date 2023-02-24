@@ -1,7 +1,7 @@
 .header {
-    background-color: $background-color-dark;
+    background-color: $background-color;
     &__nav {
-        padding: 1rem 1rem;
+        padding: 1.5rem 0;
         @include media("xxl") {
             flex-wrap: wrap;
             @include flexCenter();
@@ -14,24 +14,24 @@
         }
     }
     #head-nav {
-        padding-left: 8rem;
+        .navbar-nav {
+            margin: 0 auto;
+        }
         .nav-item {
             .nav-link {
-                color: $primary-color-darkbg;
-                font-size: 17px;
-                font-weight: 500;
+                color: $primary-color;
+                font-size: 15px;
+                font-weight: 600;
                 padding: 0.5rem 1rem;
                 margin-right: 0.25rem;
-                border: 2px solid transparent;
+                text-decoration: none;
                 @include media("lg") {
                     margin-right: 0;
-                    margin-bottom: 0.25rem;
+                    padding: 0.4rem 0;
                 }
             }
             &.active .nav-link, .nav-link:hover {
                 color: $highlight-color;
-                border: 2px solid $highlight-color;
-                border-radius: $button-radius;
             }
             &.header__button {
                 display: none;
@@ -60,6 +60,19 @@
         }
     }
     &__rightbox {
+        &-img {
+            border: 2px solid $highlight-color;
+            border-radius: $button-radius;
+            -webkit-border-radius: $button-radius;
+            -moz-border-radius: $button-radius;
+            -ms-border-radius: $button-radius;
+            -o-border-radius: $button-radius;
+            padding: 0.5rem 0.35rem;
+            margin-right: 1rem;
+            img {
+                margin-left: 0.25rem;
+            }
+        }
         .header__button {
             @include media("xxl") {
                 display: none;
@@ -86,30 +99,20 @@
         justify-content: center;
         align-items: flex-start;
         flex-direction: column;
-        padding: 0.25rem 0 0.25rem 4rem;
-        margin-left: 1.75rem;
-        background-image: url("../img/icon-contact.png");
-        background-position: left center;
-        background-repeat: no-repeat;
-        &-phone {
-            color: $primary-color-darkbg !important;
-            font-weight: 600;
-        }
-        &-email {
-            color: $highlight-color !important;
+        padding: 0.25rem 0;
+        &-title {
+            color: $tertiary-color;
+            font-size: 13px;
             font-weight: 500;
         }
-        a {
-            font-size: 17px;
-            line-height: 23px;
-            @include media("lg") {
-                font-size: 15px;
-                line-height: 21px;
-            }
+        &-phone {
+            font-weight: 600;
+            font-size: 16px;
+            color: $highlight-color;
         }
         @include media("lg") {
-            margin-left: 0;
-            margin-top: 1.5rem;
+            margin: .5rem 0 0 0;
+            padding: 0;
         }
     }
     &__subpage {
@@ -123,7 +126,6 @@
         padding: 4rem 0 3.5rem;
             border-top: 1px solid #3d3d3d;
         h1 {
-            color: $primary-color-darkbg;
             font-size: 44px;
             font-weight: 600;
             letter-spacing: -0.5px;
@@ -138,7 +140,6 @@
             }
             li {
                 a {
-                    color: $primary-color-darkbg;
                     font-weight: 400;
                     font-size: 13px;
                 }

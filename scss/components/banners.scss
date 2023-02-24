@@ -1,57 +1,60 @@
 .banner {
-    &__contentbox {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 70%;
-        height: 100%;
+    &__texts {
+        background-image: url("../img/bg-header.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 600px;
         @include flexCenter();
-        padding: 0 10rem;
-        @include media("xl") {
-            padding: 0 6rem;
-            width: 100%;
+        padding-bottom: 4rem;
+        h2 {
+            color: $secondary-color;
+            font-family: $alternative-font;
+            font-size: 66px;
+            margin-bottom: 2rem;
         }
-        @include media("md") {
-            padding: 0;
-            width: 100%;
-        }
-    }
-    &__title {
-        color: $primary-color-darkbg;
-        font-size: 62px;
-        text-shadow: 3px 3px 0px rgb(160 160 162);
-        letter-spacing: -2.25px;
-        font-weight: 600;
-        margin-bottom: 2rem;
-        @include media("md") {
-            font-size: 45px;
-            letter-spacing: -1px;
-            text-shadow: 2px 2px 0px rgb(160 160 162);
-            margin-bottom: 1rem;
+        p {
+            font-size: 20px;
+            line-height: 32px;
+            color: $secondary-color;
+            max-width: 80%;
+            margin-bottom: 2.5rem;
         }
     }
-    &__text {
-        color: $primary-color-darkbg;
-        text-shadow: 1px 1px 0px rgb(160 160 162);
-        font-size: 18px;
-        margin-bottom: 2rem;
-        @include media("md") {
-            margin-bottom: 1.5rem;
+    &__boxes {
+        display: flex;
+        margin-top: -5rem;
+        &-box {
+            background-color: $secondary-color;
+            border-radius: 1rem;
+            padding: 2rem 1rem 1.5rem;
+            max-width: 195px;
+            text-align: center;
+            filter: drop-shadow(8.045px 7.502px 17.5px rgba(0,0,0,0.08));
+            &:not(:last-child) {
+                margin-right: 1rem;
+            }
+            h3 {
+                font-size: 18px;
+                font-weight: 600;
+                margin: 1rem 0 0 0;
+            }
+            &:hover {
+                filter: drop-shadow(8.045px 7.502px 17.5px rgb(0 148 222 / 16%));
+            }
         }
-    }
-    .button-red {
-        padding: 0.75rem 1.75rem;
-        font-weight: 400;
-        font-size: 13px;
-        &:hover {
-            border-color: $primary-color;
+        &-img {
+            background-color: $background-color-light;
+            padding: 0.25rem;
+            height: 95px;
+            width: 95px;
+            border-radius: 10px;
+            @include flexCenter();
         }
     }
     &__item {
         img {
-            max-height: 874px;
-            max-width: 102%;
-            width: 102% !important;
+            max-height: 720px;
+            border-bottom-left-radius: 2.85rem;
             object-fit: cover;
             @include media("xl") {
                 min-height: 600px;

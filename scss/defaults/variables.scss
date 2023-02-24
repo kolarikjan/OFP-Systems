@@ -1,22 +1,23 @@
-$primary-color: #000;
-$secondary-color: #7e7e7e;
-
-$primary-color-darkbg: #fff;
-$secondary-color-darkbg: #989fab;
+$primary-color: #171818;
+$secondary-color: #fff;
+$tertiary-color: #696969;
+$darkbg-color: #b4b3b3;
 
 $background-color: #fff;
-$background-color-dark: #000;
-$background-color-grey: #252525;
-$background-color-light: #f5f5f5;
+$background-color-dark: #151515;
+$background-color-grey: #989fab;
+$background-color-light: #f4f4f4;
 
-$highlight-color: #e30f20;
+$highlight-color: #0094de;
 
-$button-radius: 4px;
+$alternative-font: 'Golos Text', sans-serif;
+
+$button-radius: 5px;
 
 $breaks: (
     "sm": 576px,
     "md": 768px,
     "lg": 993px,
     "xl": 1200px,
-    "xxl": 1500px,
+    "xxl": 1600px,
 );

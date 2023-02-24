@@ -19,13 +19,20 @@ body {
   background-color: $background-color;
 }
 a {
+  text-decoration: none;
+  color: $highlight-color;
+}
+a:hover {
+  text-decoration: underline;
   color: $highlight-color;
 }
 h1,h2,h3,h4,h5,h6 {
   color: $primary-color;
 }
 p,ul,ol {
-  color: $secondary-color;
+  color: $tertiary-color;
+  font-size: 15px;
+  font-weight: 400;
 }
 input, textarea {
   outline: none;

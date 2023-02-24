@@ -1,53 +1,101 @@
 .about {
-    background-color: $background-color-grey;
+    &__images {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 3rem;
+        img {
+            border-radius: 0.5rem;
+            object-fit: cover;
+            height: 410px;
+            &:not(:last-child) {
+                margin-right: 1rem;
+            }
+        }
+        @include media("lg") {
+            justify-content: center;
+            align-items: center;
+            margin-top: 5rem;
+        }
+        @include media("sm") {
+            margin-top: 3.5rem;
+        }
+    }
     &__description p {
-        color: $secondary-color-darkbg;
-        font-size: 14px;
-        line-height: 28px;
-        margin-bottom: 1.5rem;
+        font-size: 15px;
+        line-height: 26px;
+        font-weight: 500;
+        margin-bottom: 3rem;
+        @include media("md") {
+            text-align: center;
+        }
+        @include media("sm") {
+            margin-bottom: 1.5rem;
+        }
+    }
+    &__container {
+        margin-left: 3rem;
+        @include min-media("xxl") {
+            margin-left: 5rem;
+            max-width: 80%;
+        }
+        @include media("lg") {
+            margin-left: 1.5rem;
+        }
+        @include media("md") {
+            margin-left: 0;
+        }
     }
     &__numbers {
-        margin-top: 4rem;
-        @include flexCenter();
+        margin-top: 3rem;
+        display: flex;
+        @include media("md") {
+            text-align: center;
+            justify-content: space-between;
+        }
         @include media("sm") {
             flex-direction: column;
         }
         & > div {
-            padding: 0 1rem;
-            width: calc(100% / 3);
-            text-align: center;
             display: flex;
-            justify-content: flex-start;
             flex-direction: column;
-            height: 100%;
-            img {
-                margin: 0 auto 1rem;
-            }
-            &:not(:last-of-type) {
-                border-right: 1px solid #444444;
+            &:not(:last-child) {
+                padding: 0 2.5rem 0 0;
+                @include media("xxl") {
+                    padding: 0 1rem 0 0;
+                }
+                @include media("xl") {
+                    padding: 0 2rem 0 0;
+                }
+                @include media("md") {
+                    padding: 0;
+                }
             }
             @include media("sm") {
                 width: 100%;
                 &:not(:last-of-type) {
-                    border-right: 0;
-                    border-bottom: 1px solid #444444;
-                    margin-bottom: 1.5rem;
-                    padding-bottom: 1.5rem;
+                    margin-bottom: 1rem;
                 }
+            }
+            img {
+                margin: 0 auto 1rem;
             }
         }
         &-count {
-            color: $highlight-color;
-            font-size: 40px;
-            font-weight: 600;
+            color: $primary-color;
+            font-family: $alternative-font;
+            font-size: 55px;
+            line-height: 60px;
+            font-weight: 400;
             margin-bottom: 0.25rem;
         }
         &-description {
-            min-height: 48px;
-            color: $primary-color-darkbg;
+            font-weight: 500;
+            margin-bottom: 0;
         }
     }
-    .section__title h2 {
-        margin-bottom: 3rem;
+    @include media("md") {
+        .button-blue {
+            margin: 0 auto;
+        }
     }
 }
