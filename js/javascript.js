@@ -1,6 +1,32 @@
+function fixHPBanner() {
+    let width;
+    if( $(window).width() > 993) {
+        width = $(window).width() / 4;
+    } else {
+        width = $(window).width() / 2;
+    }
+
+    let homeSlides = $(".banner__homepage .banner__item").length;
+
+    let total = 64 + (homeSlides * 19) ;
+
+    total = width - ( total / 2) + 17;
+
+    setTimeout(function() { 
+        $(".banner_prev").css("left", total + "px");
+        $(".banner_next").css("right", total + "px");
+    }, 100);    
+} 
+$(window).resize(function () { 
+
+        fixHPBanner();
+
+    });
 $(document).ready(function () {
     
     Fancybox.bind("[data-fancybox]", {});
+
+    fixHPBanner();
 
     $(".popup-activator").click(function (e) {
 
@@ -20,6 +46,7 @@ $(document).ready(function () {
         items:1,
         loop:false,
         rewind:true,
+        navText:["<img src='img/arrow-right-white.png' alt='slider arrow' class='banner_prev'>","<img src='img/arrow-right-white.png' alt='slider arrow' class='banner_next'>"],
         margin:5,
         nav:true,
         dots:true
@@ -78,31 +105,6 @@ $(document).ready(function () {
             1600 : {
                 items : 3,
                 stagePadding: 150,
-            }
-        }
-    });
-    $('.brands__homepage').owlCarousel({
-        items:1,
-        loop:false,
-        rewind:true,
-        margin:30,
-        nav:false,
-        dots:false,
-        responsive : {
-            0 : {
-                items : 1,
-            },
-            576 : {
-                items : 2,
-            },
-            993 : {
-                items : 3,
-            },
-            1200 : {
-                items : 4,
-            },
-            1500 : {
-                items : 5,
             }
         }
     });

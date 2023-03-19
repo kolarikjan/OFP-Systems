@@ -32,6 +32,11 @@
         @include media("xl") {
             margin-top: 2rem;
         }
+        @include media("md") {
+            padding: 2.5rem 0 0 0;
+            background-position: top center;
+            text-align: center;
+        }
     }
     &__contacts {
         padding-left: 4rem;
@@ -40,6 +45,14 @@
             border-left: 0;
             padding-left: 2.5rem;
             margin-top: 2rem;
+        }
+        @include media("md") {
+            padding-left: 0;
+        }
+        @include media("md") {
+            a {
+                margin: 0 auto;
+            }
         }
         &-tel {
             font-size: 26px;
@@ -67,6 +80,10 @@
         margin-top: 2rem;
         display: flex;
         align-items: center;
+        @include media("md") {
+            padding-left: 0;
+            justify-content: center;
+        }
         a {
             border: 1px solid $highlight-color;
             width: 45px;

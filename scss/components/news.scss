@@ -51,6 +51,9 @@
         line-height: 30px;
         font-weight: 600;
         margin-bottom: .5rem;
+        @include media("sm") {
+            text-align: center;
+        }
     }
     &__title {
         font-size: 22px;
@@ -59,6 +62,9 @@
         line-height: 30px;
         font-weight: 700;
         margin-bottom: 1.5rem;
+        @include media("sm") {
+            text-align: center;
+        }
         &:hover {
             color: $primary-color;
             text-decoration: none;
@@ -74,6 +80,9 @@
         font-weight: 500;
         transition-duration: 0.2s;
         @include widthFit();
+        @include media("sm") {
+            margin: 0 auto;
+        }
         &:hover {
             background-position: top 5px right 0px;
             text-decoration: none;
