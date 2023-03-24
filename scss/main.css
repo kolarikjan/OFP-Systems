@@ -88,6 +88,11 @@ input, textarea {
 .header #nav .navbar-nav {
   margin: 0 auto;
 }
+@media (max-width: 993px) {
+  .header #nav .navbar-nav {
+    text-align: center;
+  }
+}
 .header #nav .nav-item .nav-link {
   color: #171818;
   font-size: 15px;
@@ -211,21 +216,38 @@ input, textarea {
   background-size: cover;
 }
 .header__breadcrumb {
-  text-align: center;
-  padding: 4rem 0 3.5rem;
-  border-top: 1px solid #3d3d3d;
+  background-image: url("../img/bg-subpage.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 2.5rem 0 6rem;
+}
+@media (max-width: 576px) {
+  .header__breadcrumb {
+    background-image: url("../img/bg-subpageMobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2.5rem 0 2.5rem;
+  }
 }
 .header__breadcrumb h1 {
-  font-size: 44px;
+  font-size: 24px;
   font-weight: 600;
   letter-spacing: -0.5px;
+  font-family: "Golos Text", sans-serif;
+  color: #fff;
+  text-align: center;
+}
+@media (min-width: 576px) {
+  .header__breadcrumb h1 {
+    display: none;
+  }
 }
 .header__breadcrumb ul {
   display: flex;
+  justify-content: flex-start;
   list-style: none;
   width: fit-content;
   width: -moz-fit-content;
-  margin: 1.5rem auto 0;
 }
 @media (max-width: 576px) {
   .header__breadcrumb ul {
@@ -235,9 +257,10 @@ input, textarea {
 .header__breadcrumb ul li a {
   font-weight: 400;
   font-size: 13px;
+  color: #fff;
 }
 .header__breadcrumb ul li:not(:last-of-type) a {
-  background-image: url("../img/arrow-bread.png");
+  background-image: url("../img/arrow-breadcrumb.png");
   padding-right: 2.25rem;
   background-repeat: no-repeat;
   background-position: right 8px center;
@@ -1145,24 +1168,77 @@ input, textarea {
   color: #696969 !important;
 }
 
-/*@import "components/contactform.scss";*/
+.contactform {
+  margin-bottom: 7rem;
+}
+@media (max-width: 768px) {
+  .contactform {
+    margin-bottom: 5rem;
+  }
+}
+.contactform__form {
+  background-color: #f4f4f4;
+  padding: 5rem 7rem;
+}
+@media (max-width: 768px) {
+  .contactform__form {
+    padding: 3rem 3rem 3rem;
+  }
+}
+.contactform__form input:not([type=submit]), .contactform__form .form__input:not([type=submit]), .contactform__form textarea:not([type=submit]) {
+  background-color: #fff;
+  padding: 1rem 1.5rem;
+  color: #171818;
+  font-size: 14px;
+  width: 100%;
+  font-weight: 600;
+  border: 1px solid transparent;
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+@media (max-width: 768px) {
+  .contactform__form input:not([type=submit]), .contactform__form .form__input:not([type=submit]), .contactform__form textarea:not([type=submit]) {
+    margin-bottom: 10px;
+  }
+}
+.contactform__form input::placeholder, .contactform__form .form__input::placeholder, .contactform__form textarea::placeholder {
+  color: #171818;
+  font-weight: 600;
+}
+.contactform__form textarea {
+  min-height: 150px;
+  resize: none;
+}
+.contactform__form input[type=submit] {
+  margin: 30px auto 0;
+}
+@media (max-width: 768px) {
+  .contactform__form input[type=submit] {
+    margin: 15px auto 0;
+  }
+}
+
 .subpage {
   padding: 7rem 0;
 }
 @media (max-width: 576px) {
   .subpage {
-    padding: 5rem 0;
+    padding: 4rem 0;
   }
 }
 .subpage p, .subpage td {
-  color: #fff;
+  color: #696969;
   font-size: 14px;
-  margin-bottom: 0;
-  line-height: 28px;
+  line-height: 29px;
+}
+@media (max-width: 768px) {
+  .subpage p, .subpage td {
+    text-align: center;
+  }
 }
 .subpage ol {
   padding-left: 1rem;
-  margin: 2rem 0;
+  margin: 0 0 1rem 0;
 }
 .subpage ol li {
   font-size: 14px;
@@ -1173,8 +1249,9 @@ input, textarea {
   color: #171818;
 }
 .subpage ul {
-  margin: 2rem 0;
+  margin: 0 0 1rem 0;
   font-size: 14px;
+  padding-left: 0;
   list-style: none;
 }
 .subpage ul li {
@@ -1210,10 +1287,35 @@ input, textarea {
     padding-bottom: 0;
   }
 }
+.subpage h1 {
+  color: #171818;
+  font-family: "Golos Text", sans-serif;
+  font-size: 45px;
+  line-height: 60px;
+  margin-bottom: 4rem;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+@media (max-width: 768px) {
+  .subpage h1 {
+    text-align: center;
+    margin-bottom: 2.25rem;
+  }
+}
+@media (max-width: 576px) {
+  .subpage h1 {
+    display: none;
+    font-size: 28px;
+    line-height: 38px;
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+  }
+}
 .subpage__content h2 {
   color: #171818;
-  font-size: 36px;
-  line-height: 54px;
+  font-family: "Golos Text", sans-serif;
+  font-size: 32px;
+  line-height: 42px;
   margin-bottom: 3rem;
   margin-top: 4rem;
   font-weight: 600;
@@ -1221,6 +1323,7 @@ input, textarea {
 }
 @media (max-width: 768px) {
   .subpage__content h2 {
+    text-align: center;
     font-size: 28px;
     line-height: 38px;
     margin-bottom: 1.5rem;
@@ -1229,8 +1332,9 @@ input, textarea {
 }
 .subpage__content h3 {
   color: #171818;
-  font-size: 26px;
-  line-height: 40px;
+  font-family: "Golos Text", sans-serif;
+  font-size: 24px;
+  line-height: 36px;
   margin-bottom: 2.5rem;
   margin-top: 3.5rem;
   font-weight: 600;
@@ -1238,6 +1342,7 @@ input, textarea {
 }
 @media (max-width: 768px) {
   .subpage__content h3 {
+    text-align: center;
     font-size: 22px;
     line-height: 32px;
     margin-bottom: 1.5rem;
@@ -1246,6 +1351,7 @@ input, textarea {
 }
 .subpage__content h4 {
   color: #171818;
+  font-family: "Golos Text", sans-serif;
   font-size: 20px;
   line-height: 30px;
   margin-bottom: 2rem;
@@ -1255,6 +1361,7 @@ input, textarea {
 }
 @media (max-width: 768px) {
   .subpage__content h4 {
+    text-align: center;
     font-size: 18px;
     line-height: 28px;
     margin-bottom: 1rem;
@@ -1266,6 +1373,11 @@ input, textarea {
   overflow-y: scroll;
   border-bottom: 1px solid #eeeeee;
 }
+@media (max-width: 768px) {
+  .subpage__content table {
+    text-align: center;
+  }
+}
 .subpage__content table thead {
   background-color: #f4f4f4;
 }
@@ -1274,6 +1386,7 @@ input, textarea {
   letter-spacing: -0.25px;
   border-top: 1px solid #eeeeee;
   font-size: 14px;
+  color: #171818;
 }
 .subpage__content table td {
   padding: 1rem 1.5rem;
@@ -1283,52 +1396,72 @@ input, textarea {
   margin-top: 0;
 }
 
-.subpage .contact__box {
-  background-repeat: no-repeat;
-  background-position: left top 0px;
-  padding-left: 2.5rem;
-}
-@media (max-width: 1200px) {
-  .subpage .contact__box {
-    margin-bottom: 3rem;
-  }
-}
-.subpage .contact h3 {
-  font-size: 25px;
-  line-height: 32px;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-}
-.subpage .contact__address {
-  background-image: url("../img/icon-pinred.png");
-}
-.subpage .contact__hours {
-  background-image: url("../img/icon-timered.png");
-}
-.subpage .contact__contact {
+.subpage .contact__map {
   margin-top: 3rem;
-  background-image: url("../img/icon-phonered.png");
-  background-position: left top 5px;
-}
-@media (max-width: 1200px) {
-  .subpage .contact__contact {
-    margin-top: 0;
-  }
-}
-.subpage .contact__contact-phone {
-  font-size: 30px;
-  font-weight: 700;
-  color: #171818;
-  padding: 0.25rem;
-  display: block;
-}
-.subpage .contact__contact-email {
-  font-weight: 500;
 }
 @media (min-width: 1200px) {
   .subpage .contact__map {
     margin-top: 4rem;
   }
+}
+.subpage .contact h3 {
+  color: #171818;
+  font-family: "Golos Text", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+}
+.subpage .contact p {
+  font-size: 14px;
+  line-height: 28px;
+  color: #696969;
+  margin-bottom: 0;
+}
+@media (max-width: 993px) {
+  .subpage .contact .footer__pin {
+    margin-top: 0;
+    margin-bottom: 2.5rem;
+  }
+}
+.subpage .contact__phones {
+  padding-left: 4rem;
+}
+@media (max-width: 1200px) {
+  .subpage .contact__phones {
+    border-left: 0;
+    padding-left: 2.5rem;
+    margin-top: 0rem;
+  }
+}
+@media (max-width: 768px) {
+  .subpage .contact__phones {
+    padding-left: 0;
+  }
+}
+@media (max-width: 768px) {
+  .subpage .contact__phones a {
+    margin: 0 auto;
+  }
+}
+.subpage .contact__phones-tel {
+  font-size: 26px;
+  line-height: 42px;
+  font-family: "Golos Text", sans-serif;
+  color: #171818;
+  font-weight: 500;
+}
+.subpage .contact__phones-mail {
+  font-size: 18px;
+  line-height: 42px;
+  font-weight: 500;
+}
+.subpage .contact__phones a {
+  width: fit-content;
+  width: -moz-fit-content;
+  display: block;
+}
+.subpage .contact__phones a:hover {
+  color: #0094de;
+  text-decoration: none;
 }
 
 @media (min-width: 1600px) {
